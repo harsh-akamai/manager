@@ -156,13 +156,7 @@ export const LinodeSelect = (
       }
       onInputChange={(_, value) => setInputValue(value)}
       options={linodes ?? []}
-      placeholder={
-        placeholder
-          ? placeholder
-          : multiple
-            ? 'Select Linodes'
-            : 'Select a Linode'
-      }
+      placeholder={placeholder ?? 'Select Linodes'}
       PopperComponent={CustomPopper}
       renderOption={(props, linode, { selected }) => {
         const { key, ...restProps } = props; // Avoids passing `key` via props, which triggers React console warnings.
